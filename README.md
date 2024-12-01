@@ -10,6 +10,10 @@ This is an implementation of research I initally conducted at Queen Mary, Univer
 The research sits on the interface of computer science, automata theory, information theory, dynamical systems theory and theoretical physics.
 The original idea was proposed by Professor David Berman, initally implementing the novel cellular automata on a 1980s home computer with limited memory and compute.
 
+## What is a recrusive cellular automata?
+
+A Recursive Cellular Automata (RCA) is essentially an elementary cellular automata but on each update step, the rule is set to be equal to the state. In this way, the RCA has a limited length determined by it's neighbourhood length. For a 3 neighbourhood cellular automata, the length of the state array (and consequently, rule array) is 2^3 = 8. For a 5n system, the length of the state & rule arrays is 2^5 =32. RCA have a circular topology as depicted below.
+
 ![circulartopology](https://github.com/user-attachments/assets/483fd8b4-b08d-4b7f-8869-b2f0d322bac5)
 
 ## Most interesting discovery
@@ -29,5 +33,6 @@ It is worth exploring whether an RNN can trained to predict the next state, find
 - code is currently scrappy, plan to rewrite with OOP principles for managability and to write short tutorial projects
 - implement ML or NN models to classify the states of the 3n system
 - find a smaple of attractors in the 5n RCA to use as training data for the 5n classifier
+- compare rules that have equivalent sequences of states. i.e. 11111110 and 0111111 (given circular topology of the RCA, there may very well be equivalences ro symmeteries here).
 
 ![attractortypes](https://github.com/user-attachments/assets/79237ffb-38a9-44e1-bb9f-012c937c7abf)
